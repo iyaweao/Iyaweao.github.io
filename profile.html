@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link rel="stylesheet" type="text/css" href="css/googlefonts.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+    <!--for icons note that fonts.css and webfont go together-->
+    <link rel="stylesheet" type="text/css" href="fontcss/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+
+    <style media="screen">
+
+    </style>
+    <meta charset="utf-8">
+    <title>Zing</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav id="sidebar">
+        <div id="dismiss">
+          <i class="fas fa-xmark"></i>
+        </div>
+        <div class="sidebar-header">
+          <img style="width:55px; height:25px;" src="images/IMG_6293.webp"  alt="logo">
+        </div>
+
+        <ul class="list-unstyled components">
+          <li>
+            <a href="#"><i class="fas fa-caret-right pr-2"></i></i>Home</a>
+          </li>
+          <li class="">
+            <a href="#menSubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-caret-down pr-2"></i>Men's fashion</a>
+            <ul class="collapse list-unstyled"  id="menSubmenu">
+              <li><a class="" href="#">Shirts</a>
+              </li>
+              <li><a class="" href="#">Pants</a>
+              </li>
+              <li><a class="" href="#">Shoes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#womenSubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-caret-down pr-2"></i>Women's fashion</a>
+            <ul class="collapse list-unstyled"  id="womenSubmenu">
+              <li><a class="" href="#">Shirts</a>
+              </li>
+              <li><a class="" href="#">Pants</a>
+              </li>
+              <li><a class="" href="#">Shoes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#kid"><i class="fas fa-caret-right pr-2"></i>Kid's corner</a>
+          </li>
+          <li class="">
+            <a href="#Accessories"><i class="fas fa-caret-right pr-2"></i>Accessories</a>
+          </li>
+      </ul>
+
+      </nav>
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+          <div class="container-fluid flex-container">
+            <div class="flex-item">
+              <div class="d-flex">
+              <div class="mr-auto">
+            <button type="button" id="sidebarCollapse" class="btn" name="button">
+              <i class="fas fa-bars"></i>
+            </button>
+            <span class="logo">
+            <a href="index.html"><img class=""src="images/IMG_6293.webp" alt="zing"></a>
+          </span>
+        </div>
+          </div>
+            </div>
+
+            <div class="flex-item">
+                <div class="box-container">
+                  <div class="box">
+                    <i class="fas fa-magnifying-glass pl-2" aria-hidden="true"></i>
+                   <input type="text" placeholder="Search for products, brands..." style="border:none;outline:none;" name="search" value="">
+                  </div>
+                </div>
+            </div>
+
+            <div class="flex-item">
+              <div class="d-flex">
+                <div class="ml-auto">
+                 <a href="#" class="pl-2" ><i class="fas fa-heart"></i></a>
+              <a role="" class="btn cart" href="cart.html" name="cart">
+                <i class=" fas fa-shopping-cart"></i>
+                <span id="cart-item" class="position-absolute top-0 start-100 translate-middle badge" style="border:1px solid #ba819f; color:#ba819f">1</span>
+              </a>
+                </div>
+            </div>
+          </div>
+
+          </div>
+        </nav>
+        <main>
+          <h6 class="pl-2"><b>My account</b></h6>
+          <div class="media p-3">
+            <img src="images/1f87207682daf2371a817fc2a5f56bfc1.jpg" alt="ppic" class="mr-3 mt-3 rounded-circle" style="width:40px;height:40px">
+           <div class="media-body">
+             <p>Jimmy Whoo<br><span class="text-secondary">Jimmy@gmail.com</span></p>
+           </div>
+         </div>
+         <div class="container profile-container my-4">
+           <h5>My orders</h5>
+           <div class="d-flex">
+             <div class="flex-fill">
+               <a class="text-center"href="#"><h5><i class="fas fa-credit-card"></i></h5>
+               <p>Unpaid</p></a>
+             </div>
+             <div class="flex-fill">
+               <a class="text-center"href="#"><h5><i class="fas fa-clock"></i></h5>
+               <p>Pending</p></a>
+             </div>
+             <div class="flex-fill">
+               <a class="text-center"href="#"><h5><i class="fas fa-truck"></i></h5>
+               <p>Shipped</p></a>
+             </div>
+             <div class="flex-fill">
+               <a class="text-center"href="#"><h5><i class="fas fa-file-lines"></i></h5>
+               <p>Reviews</p></a>
+             </div>
+           </div>
+         </div>
+         <div class="container profile-container my-4">
+           <h5>Details</h5>
+           <h6 style="float:right"><a href="#"><i class="fas fa-pen"></i></a></h6>
+           <p>Name:&nbsp; Jimmy Whoo</p>
+           <p>Address:&nbsp;35 China Express</p>
+           <p>Phone:&nbsp;09181147539</p>
+           <p>Payment Mode:&nbsp;Card</p>
+           <p>State:&nbsp;Abuja</p>
+           <p>City:&nbsp;Gwarinpa</p>
+           <p>Postal Code:&nbsp;309564</p>
+           <p>Apartment Number:&nbsp;98</p>
+           <p>Delivery Method:&nbsp;DHL Shipping</p>
+         </div>
+        </main>
+
+      </div>
+      <div class="overlay">
+
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery-3.6.0.js">
+    </script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js">
+    </script>
+    <script type="text/javascript" src="mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js">
+    </script>
+    <script type="text/javascript" src="js/wow.min.js">
+    </script>
+    <!--the javascript for sidebar using mCustomScrollbar-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("#sidebar").mCustomScrollbar({
+        theme:"minimal"
+      });
+      $('#dismiss, .overlay').on('click', function(){
+        $('#sidebar').removeClass('active');
+        $('.overlay').removeClass('active');
+      });
+      $('#sidebarCollapse').on('click', function(){
+        $('#sidebar').addClass('active');
+        $('.overlay').addClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded','false');
+      });
+    });
+    </script>
+  </body>
+</html>

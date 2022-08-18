@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Details</title>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+  <link rel="stylesheet" type="text/css" href="css/googlefonts.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" type="text/css" href="fontcss/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <style media="screen">
+  input[type='radio']{
+    height: 15px;
+    width: 15px;
+    accent-color: #ba819f;
+  }
+  .order-detail{
+    padding: 20px;
+    margin: 50px;
+  }
+  .main{
+    margin-left: 80px;
+    margin-top: 40px;
+  }
+  .buy{
+    margin-top:!important;
+  }
+  @media (max-width: 400px) {
+  p,b,label {
+    font-size: 0.8em;
+  }
+ input[type='text'] {
+    height: 25px;
+  }
+  input[type='tel'] {
+    height: 25px;
+  }
+  input[type='email'] {
+    height: 25px;
+  }
+  input[type='text'], input[type='text']::placeholder {
+     font-size: .8rem;
+   }
+   input[type='tel'], input[type='tel']::placeholder {
+     font-size: .8rem;
+   }
+   input[type='email'], input[type='email']::placeholder {
+      font-size: .8rem;
+    }
+  select {
+      height: 30px!important;
+      font-size: 0.8rem!important;
+  }
+  .main{
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+  .order-detail{
+    padding: 15px;
+    margin: 25px;
+  }
+}
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container-fluid flex-container">
+        <div class="flex-item">
+          <div class="d-flex">
+          <div class="mr-auto">
+            <button type="button" id="sidebarCollapse" class="btn" name="button">
+              <i class="fas fa-bars"></i>
+            </button>
+        <span class="logo">
+        <a href="index.php"><img class=""src="images/IMG_6293.webp" alt="zing"></a>
+      </span>
+    </div>
+      </div>
+        </div>
+
+        <div class="flex-item">
+            <div class="box-container">
+              <div class="box">
+                <i class="fas fa-magnifying-glass pl-2" aria-hidden="true"></i>
+               <input type="text" placeholder="Search for products, brands..." style="border:none;outline:none;" name="search" value="">
+              </div>
+            </div>
+        </div>
+
+        <div class="flex-item">
+          <div class="d-flex">
+            <div class="ml-auto">
+             <a href="profile.php" class=""><i class="fas fa-user"></i></a>
+             <a href="wishlist.php" class="pl-2" ><i class="fas fa-heart"></i></a>
+            </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+     <div class="container-fluid">
+      <div class="row d-flex justify-content-center">
+        <div class="main col-sm-11 col-md-6 col-lg-6">
+
+          <span><b>Payment Method</b></span><br>
+          <input type="radio" id="card" name="pmode" checked value="cards">
+          <label for="card">&nbsp; Credit Card &nbsp;&nbsp;</label>
+          <input type="radio" id="cash"name="pmode" value="payment on delivery">
+          <label for="cash">&nbsp;Cash on delivery</label><br><br>
+
+        <span><b>Delivery Method</b></span><br>
+        <input type="radio" id="fedex" name="dmode" value="FedEx" >
+        <label for="card">&nbsp;FedEx Shipping&nbsp;&nbsp;</label>
+        <input type="radio" id="dhl"name="dmode" checked value="DHL">
+        <label for="dhl">&nbsp;DHL Shipping</label><br><br>
+
+        <span><b>Delivery Address</b></span><br>
+        <div class="form-inline">
+        <span style="float:left;margin:10px;"><input type="radio" id="info" name="newinfo" value=""></span>
+        <label for="info">Jimmy Whoo<br>35 China Express<br>Gwarinpa,&nbsp;Abuja.<br>309564,&nbsp;98</label><br><br>
+      </div>
+        <input type="radio" style="margin:10px;"id="newinfo" checked name="newinfo" value="newinfo" onclick="NewData();">
+        <label for="newinfo">Add new address</label><br><br>
+        <div class="row" id="dataContainer">
+         <!--space for new info-->
+         <div class="col-9 pb-3">
+             <div class="form-group">
+               <label for="cname" class="">Full Name</label>
+               <input type="text" id="cname" class="form-control"style="border-radius:12px;" placeholder="Enter Full Name" name="name" value="" required>
+             </div>
+
+         <div class="row">
+           <div class="col">
+             <div class="form-group">
+               <label for="state">State</label><br>
+               <select id="state"class="form-control" style="border-radius:12px;" name="state" required>
+                 <option value=""selected disabled>Select State</option>
+                 <option value="">Abuja</option>
+                 <option value="">Edo</option>
+                 <option value="">Lagos</option>
+             </select>
+             </div>
+           </div>
+           <div class="col">
+             <div class="form-group">
+               <label for="city">City</label><br>
+               <select id="city" class="form-control" style="border-radius:12px;" name="city" required>
+                 <option value="" selected disabled>Select City</option>
+               </select>
+             </div>
+           </div>
+         </div>
+
+             <div class="form-group">
+               <label for="caddress" class="">Address</label>
+               <input type="text" id="caddress" class="form-control"style="border-radius:12px;" placeholder="Enter Address" name="address" value="" required>
+             </div>
+
+             <div class="row">
+               <div class="col">
+                 <label for="apt" class="">Apt Number</label>
+                 <input type="tel" id="apt" class="form-control" style="border-radius:12px;" placeholder="Apartment number" name="apt_number" value="" required>
+               </div>
+               <div class="col">
+                 <label for="pcode" class="">Postal Code</label>
+                 <input type="tel" id="pcode" class="form-control" style="border-radius:12px;" placeholder="Postal code" name="postal_code" value="" required>
+               </div>
+             </div>
+         </div>
+        </div>
+
+        <div class="pt-2 pb-3 pl-4">
+          <a role="button" href="checkout.html" name="submit-acc-details" class="buy" style="">Proceed to payment</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="js/jquery-3.6.0.js">
+  </script>
+  <script type="text/javascript" src="js/popper.min.js">
+  </script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js">
+  </script>
+  <script type="text/javascript" src="mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script type="text/javascript" src="js/wow.min.js">
+  </script>
+  <script type="text/javascript" src="js/myjavascript.js">
+  </script>
+    <!--selecting new info and disabling other options-->
+  <script type="text/javascript">
+  function NewData() {
+    //selecting new info//
+      var myval = $("input[name=newinfo]:checked").val();
+      console.log(myval);
+      $.ajax({
+          type: 'POST',
+          url: 'newdata.php',
+          data: {'myval':myval},
+          success: function (html) {
+              $('#dataContainer').html(html);
+          }
+      });
+  }
+  </script>
+  </body>
+  </html>

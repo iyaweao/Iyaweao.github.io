@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Register</title>
+ <meta charset="utf-8">
+ <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+ <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+ <link rel="stylesheet" type="text/css" href="css/googlefonts.css">
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ <link rel="stylesheet" href="mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+ <link rel="stylesheet" type="text/css" href="fontcss/all.min.css">
+ <link rel="stylesheet" type="text/css" href="css/animate.css">
+
+ <style media="screen">
+ .banner-login{
+    background-image: url("images/loginbanner.jpg");
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+ }
+ .signup{
+   padding-top: 30px;
+   padding-left: 150px;
+ }
+ .signup-logo{
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+ ::placeholder{
+   color: white;
+   opacity: 1;
+ }
+ /*ie 10-11*/
+ :-ms-input-placeholder{
+   color: white;
+ }
+ /*microsoft edge*/
+ ::-ms-input-placeholder{
+   color: white;
+ }
+ @media (max-width: 400px){
+   .signup{
+     padding-left: 0px;
+     padding-right: 0px;
+   }
+   .banner-login{
+      background-image: url("images/loginbanner.jpg");
+      background-size:cover;
+      background-position: center;
+      background-attachment: scroll;
+      height: auto;
+   }
+ }
+ </style>
+</head>
+<body>
+ <main>
+   <div class="container-fluid banner-login">
+   <div class="row signup">
+   <div class="col-lg-4 col-md-4 col-sm-10 col-11">
+   <div class="signup-logo">
+     <img style="width:55px; height:25px;" src="images/IMG_6293.webp"  alt="logo">
+   </div>
+
+   <h5 class="text-light py-1 lead">Create an account</h5>
+       <div class="form-group">
+         <label for="uid" class="text-light">Username:</label>
+         <input type="text" id="uid" style="background-color:inherit;border-radius:12px;color:white" class="form-control" placeholder="Enter Username" name="uid" value="">
+       </div>
+
+       <div class="form-group">
+         <label for="mail" class="text-light">Email Address:</label>
+         <input type="email"  class="form-control"style="background-color:inherit;border-radius:12px;color:white" id="mail" placeholder="Enter Email" name="mail" value="">
+       </div>
+
+       <div class="form-group">
+         <label for="pwd" class="text-light">Password:</label>
+         <input type="password"  class="form-control"style="background-color:inherit;border-radius:12px;color:white" id="pword" placeholder="Enter Password"name="pwd" value="" >
+       </div>
+
+       <div class="form-group">
+         <label for="pwd-repeat" class="text-light">Confirm Password:</label>
+         <input type="password"  class="form-control" style="background-color:inherit;border-radius:12px;color:white" id="pword" placeholder="Repeat Password" name="pwd-repeat" value="">
+       </div>
+      <button type="submit" class="btn btn-block text-light" style="background-color:#9ec1a3;border-radius:12px;" name="signup-submit">Sign Up</button>
+
+   <a class="text-light btn btn-block my-3" role="button" style="border:1px solid white;border-radius:12px"href=""><img src="images/IMG_63801.png" class="rounded" width="30px"alt="google"> Sign up with google</a>
+       <h6 class="text-light text-center">Already have an account? <a href="login.html" class="text-light">Sign in</a></h6>
+     </div>
+   </div>
+   </div>
+ </main>
+ <script type="text/javascript" src="js/jquery-3.6.0.js">
+ </script>
+ <script type="text/javascript" src="js/popper.min.js">
+ </script>
+ <script type="text/javascript" src="js/bootstrap.bundle.min.js">
+ </script>
+ <script type="text/javascript" src="mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js">
+ </script>
+ <script type="text/javascript" src="js/wow.min.js">
+ </script>
+ <script type="text/javascript" src="js/myjavascript.js">
+ </script>
+
+ </body>
+ </html>
